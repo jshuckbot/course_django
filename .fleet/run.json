@@ -1,19 +1,15 @@
 {
     "configurations": [
         {
-            "type": "python",
-            "name": "django",
-            "file": "manage.py",
-            "arguments": ["runserver", "0.0.0.0:8000"],
-            
-        },
-        {
-            "type": "python",
-            "name": "django ssl",
-            "file": "manage.py",
-            "arguments": ["runserver_plus", "--cert-file", "cert.crt"],
-        },
+            "type": "django",
+            "name": "Django configuration",
+            "command": "runserver",
+            "manageFilePath": "manage.py",
+            "arguments": [
+                "0.0.0.0:8000"
+            ],
 
+        },
 
     ]
 }
