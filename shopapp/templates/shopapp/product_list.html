@@ -1,0 +1,14 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}Список продуктов{% endblock title %}
+
+{% block content %}
+    <h1>Выборка за {{ days }} дней</h1>
+    <ul>
+        {% for product in products %}
+            <li>{{ product }}</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock content %}
