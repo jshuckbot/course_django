@@ -7,11 +7,12 @@ class Command(BaseCommand):
     help = "Create Customer"
 
     def handle(self, *args, **options):
-        customer = shopapp_models.Customer()
-        customer.first_name = "John"
-        customer.email = "test@test.ru"
-        customer.phone = "9433330229"
-        customer.address = "Testogorsk"
-        customer.save()
+        for i in range(10):
+            customer = shopapp_models.Customer()
+            customer.first_name = f"name{i}"
+            customer.email = f"test@test{i}.ru"
+            customer.phone = f"94333{i}229"
+            customer.address = f"Testogorsk{i}"
+            customer.save()
 
-        self.stdout.write(f"{customer}")
+        self.stdout.write(f"save complite")
