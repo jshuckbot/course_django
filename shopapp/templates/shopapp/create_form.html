@@ -1,0 +1,12 @@
+{% extends 'shopapp/base.html' %}
+{% block title %}
+    Создание продукта
+{% endblock %}
+
+{% block content %}
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Отправить">
+    </form>
+{% endblock %}
