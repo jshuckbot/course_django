@@ -16,6 +16,7 @@ class Product(models.Model):
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=8, decimal_places=2)
+    image = models.ImageField(upload_to="products/%Y/%m/%d", blank=True)
     total = models.PositiveIntegerField(default=0)
     created = models.DateTimeField(auto_now=True)
 
